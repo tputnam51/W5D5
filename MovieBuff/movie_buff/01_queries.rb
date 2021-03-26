@@ -23,11 +23,7 @@ def harrison_ford
   # Find the id and title of all movies in which Harrison Ford
   # appeared but not as a lead actor
 
-<<<<<<< HEAD
   Movie.select(:id, :title).joins(:actors).where(actors: {name: 'Harrison Ford'}).where.not( castings: {ord: 1})
-=======
-  Movie.select(:id, :title).joins(:actors).joins(:castings).where(actors: {name: 'Harrison Ford'}, castings: {'ORD != 1'})
->>>>>>> a0cc8296ace11707356bdfba00909bf280e2fd28
 
 end
 
